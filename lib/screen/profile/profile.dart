@@ -83,6 +83,8 @@ class _ProfileState extends State<Profile> {
       setState(() {
         _profilePicture = image;
       });
+      final imageBase64 = ImageConverter.encodeImageToBase64(await ImageConverter.fileToBase64String(image));
+      //TODO upload image to supabase string
     }
   }
 
